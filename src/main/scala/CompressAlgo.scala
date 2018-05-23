@@ -1,3 +1,3 @@
-class CompressAlgo {
-
+class CompressAlgo(var input: String) {
+  
 }

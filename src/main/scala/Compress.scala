@@ -1,3 +1,3 @@
-class Compress {
+object Compress extends  App {
 
 }
