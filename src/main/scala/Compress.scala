@@ -1,3 +1,0 @@
-object Compress extends  App {
-
-}
