@@ -1,8 +1,8 @@
 package Algos
 
-class CompressAlgo(var input: String) {
+class CompressAlgo() {
 
-  def RLE() = (1 until input.size)
+  def RLE(input: String) = (1 until input.size)
     .foldLeft((1, new StringBuilder)) {
       case ((count, sb), idx) =>
         if (input(idx - 1) != input(idx)) {
