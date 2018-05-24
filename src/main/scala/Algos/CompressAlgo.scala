@@ -18,4 +18,13 @@ class CompressAlgo() {
       sb.append(input.last)
       sb.toString()
   }
+
+  def genFreqMap(input: String) = input
+    .foldLeft(Map[Char, Int]()) {
+      (map, c) =>
+        if (map.isDefinedAt(c)) (map + (c -> (map(c) + 1)))
+        else (map + (c -> 1))
+    }
+
+//  def Huffman(input:String)
 }
