@@ -6,7 +6,7 @@ class CompressAlgo(var input: String) {
     .foldLeft((1, new StringBuilder)) {
       case ((count, sb), idx) =>
         if (input(idx - 1) != input(idx)) {
-          sb.append(count)
+          if (count > 1) sb.append(count)
           sb.append(input(idx - 1))
           (1, sb)
         } else {
@@ -14,7 +14,7 @@ class CompressAlgo(var input: String) {
         }
     } match {
     case (count, sb) =>
-      sb.append(count)
+      if (count > 1) sb.append(count)
       sb.append(input.last)
       sb.toString()
   }
